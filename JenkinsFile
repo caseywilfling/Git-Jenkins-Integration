@@ -3,40 +3,47 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'
+                echo 'Building application...'
+                echo 'Tool: Maven (Build and dependency management)'
             }
         }
         stage('Unit and Integration Tests') {
             steps {
-                echo 'Conducting Tests...'
+                echo 'Running unit and integration tests...'
+                echo 'Tool: JUnit (Unit and integration testing)'
             }
         }
         stage('Code Analysis') {
             steps {
-                echo 'Analyzing Code...'
+                echo 'Running static code analysis...'
+                echo 'Tool: SonarQube (Static code analysis)'
             }
         }
         stage('Security Scan') {
             steps {
-                echo 'Scanning code for vulnerabilities...'
-                echo 'No vulnerabilties detected.'
+                echo 'Scanning for vulnerabilities...'
+                echo 'Tool: OWASP Dependency-Check (Security scanning)'
             }
         }
         stage('Deploying to Staging') {
             steps {
-                echo 'Deploying code to Staging Area...'
+                echo 'Deploying to staging environment...'
+                echo 'Tool: Ansible (Staging deployment)'
             }
         }
         stage('Integration Tests on Staging') {
             steps {
-                echo 'Running Integration Tests on Staging...'
+                echo 'Running integration tests on staging...'
+                echo 'Tool: Selenium (Staging integration testing)'
             }
         }
         stage('Deploy to Production') {
             steps {
-                echo 'Deploying code to Production server...'
+                echo 'Deploying to production environment...'
+                echo 'Tool: AWS CLI (Production deployment)'
             }
         }
     }
 }
+
 
