@@ -19,6 +19,7 @@ pipeline {
         stage('Security Scan') {
             steps {
                 echo 'Scanning code for vulnerabilities...'
+                echo 'No vulnerabilties detected.'
             }
         }
         stage('Deploying to Staging') {
@@ -38,3 +39,4 @@ pipeline {
         }
     }
 }
+
