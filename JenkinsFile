@@ -23,7 +23,6 @@ pipeline {
             steps {
                 echo 'Scanning for vulnerabilities...'
                 echo 'Tool: OWASP Dependency-Check (Security scanning)'
-                echo 'No vulnerabilities found.'
             }
         }
         stage('Deploying to Staging') {
@@ -46,6 +45,7 @@ pipeline {
         }
     }
 }
+
 
 
 
